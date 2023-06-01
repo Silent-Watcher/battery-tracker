@@ -8,8 +8,10 @@ export default defineConfig({
       registerType: 'autoUpdate',
       manifest: {
         name: 'Battery_Tracker',
-        short_name: 'BT',
+        short_name: 'Battery_Tracker',
+        
         display: 'standalone',
+        orientation:"any",
         start_url: '/',
         dir: 'ltr',
         background_color: '#232323',
