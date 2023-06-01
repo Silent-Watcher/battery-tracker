@@ -280,6 +280,11 @@ sass@^1.62.1:
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
 
+three-dots@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/three-dots/-/three-dots-0.3.2.tgz#02ec1193d60d9cf4901cb3918b483459da0b3d8d"
+  integrity sha512-N7JMhoCX+4mhgGWy4Hqy4PZ27shKwLRvaADn3YsK9+bImK5U/xA/woCUavehoHGrkNG3yyAzwQ6UnuFH0/yLVQ==
+
 to-regex-range@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/to-regex-range/-/to-regex-range-5.0.1.tgz#1648c44aae7c8d988a326018ed72f5b4dd0392e4"

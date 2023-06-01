@@ -24,11 +24,11 @@
     <!-- main css -->
     <link rel="stylesheet" href="src/scss/style.scss" />
   </head>
-  <body class="vw-100 vh-100 d-flex justify-content-center align-items-center position-relative">
+  <body class="vw-100 vh-100 d-flex justify-content-center align-items-center position-relative user-select-none">
     <aside>
       <div id="aside-left" class="position-fixed  d-flex flex-column justify-content-center align-items-center">
-        <i class='bx bxs-moon'></i>
-        <i class='bx bxl-github'></i>
+        <i id="moon" class='bx bxs-moon '></i>
+        <a href="#"> <i id="sun" class='bx bxl-github'></i></a>
         <!-- <i class='bx bxs-sun' ></i> -->
       </d>
       <div id="aside-right" class="position-fixed d-flex flex-column justify-content-center align-items-center">
@@ -41,7 +41,7 @@
       <div class="container">
         <header>
           <div class="row">
-            <h1 class="text-center mt-5 text-uppercase">Battery Tracker</h1>
+            <h1 class="text-center mb-5">Battery Tracker</h1>
           </div>
         </header>
         <main class="my-5">
@@ -50,11 +50,13 @@
               id="battery-wrapper"
               class="d-flex flex-column justify-content-center align-items-center"
             >
-              <div id="battery" class="mb-4">
-                <div id="battery-value"></div>
+              <div id="battery" class="mb-4 position-relative">
+                <div id="battery-level"></div>
+                <img hidden class="position-absolute" id="battery-thunder" src="./thunder.png" alt="thunder">
               </div>
               <p id="battery-percentage" class="mb-0">82%</p>
-              <p id="battery-status">15 min remaining</p>
+              <p id="battery-status" class="mb-2" >15 min remaining</p>
+              <p id="charging-text" class="text-secondary d-none justify-content-center align-items-center"><span>charging</span> <span class="dot-elastic ms-4"></span></p>
             </section>
           </div>
           <div class="row">
@@ -65,7 +67,7 @@
         </main>
         <footer>
           <div class="row">
-            <p class="text-center">made with love and coffee</p>
+            <p class="text-center">made with 💚 and ☕</p>
           </div>
         </footer>
       </div>
