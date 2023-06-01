@@ -16,8 +16,9 @@ export function setBatteryLevel(battery) {
 }
 
 export function setBatteryPercentage(battery) {
+  let level = battery.level * 100;
   const batteryPercentage = document.getElementById('battery-percentage');
-  batteryPercentage.textContent = `${battery.level * 100}%`;
+  batteryPercentage.textContent = `${level.toFixed(0)}%`;
 }
 
 export function addBatteryThunder() {

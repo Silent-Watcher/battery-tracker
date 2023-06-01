@@ -26,15 +26,20 @@
   </head>
   <body class="vw-100 d-flex justify-content-center align-items-center position-relative user-select-none">
     <aside>
-      <div id="aside-left" class="position-fixed  d-flex flex-column justify-content-center align-items-center">
-        <i id="moon" class='bx bxs-moon '></i>
-        <a href="#"> <i id="sun" class='bx bxl-github'></i></a>
-        <!-- <i class='bx bxs-sun' ></i> -->
+      <div id="aside-left" class="d-none position-fixed d-md-flex flex-column justify-content-center align-items-center">
+        <i class='moon bx bxs-moon'></i>
+        <a href="#"> <i class='bx bxl-github'></i></a>
       </d>
-      <div id="aside-right" class="position-fixed d-flex flex-column justify-content-center align-items-center">
-        <i class='bx bxl-android' ></i>
-        <i class='bx bxl-apple' ></i>
-        <i class='bx bxl-windows'></i>
+      <div id="aside-right" class="d-none position-fixed d-md-flex flex-column justify-content-center align-items-center">
+        <a href="">
+          <i class='bx bxl-windows'></i>
+        </a>
+        <a href="">
+          <i class='bx bxl-apple' ></i>
+        </a>
+        <i href="">
+          <i class='bx bxl-android' ></i>
+        </a>
       </div>
     </aside>
     <div class="container-fluid">
@@ -42,6 +47,12 @@
         <header>
           <div class="row">
             <h1 class="text-center mt-5 mb-3">Battery Tracker</h1>
+            <nav class="mt-4">
+              <ul class="d-flex d-md-none list-unstyled justify-content-around fs-3">
+                <li><i class='moon bx bxs-moon '></i></li>
+                <li><a href="#"><i class='bx bxl-github'></i></a></li>
+              </ul>
+            </nav>
           </div>
         </header>
         <main class="my-5">
@@ -60,13 +71,24 @@
             </section>
           </div>
           <div class="row">
-            <section id="graph-wrapper" class="col-12 col-md-6 offset-md-3 mt-3">
-              <canvas id="battery-chart"></canvas>
+            <section id="graph-wrapper" class="col-12 col-md-8 offset-md-2 mt-3">
+              <canvas class="w-100" id="battery-chart"></canvas>
             </section>
           </div>
         </main>
         <footer>
           <div class="row">
+            <nav id="platforms-apps" class="d-block d-md-none text-center fs-2 mt-5 mb-3">
+              <a href="">
+                <i class='bx bxl-android' ></i>
+              </a>
+              <a href="">
+                <i class='bx bxl-apple' ></i>
+              </a>
+              <a href="">
+                <i class='bx bxl-windows'></i>
+              </a>
+            </nav>
             <p class="text-center">made with 💚 and ☕</p>
           </div>
         </footer>

@@ -52,10 +52,12 @@ window.addEventListener('load', async () => {
     }
   });
   //   dark and light theme
-  document.getElementById('moon').addEventListener('click', (event) => {
-    event.target.classList.toggle('bxs-sun');
-    document.body.classList.toggle('theme-dark');
-  });
+  document.querySelectorAll('.moon').forEach(icon => {
+    icon.addEventListener('click',function(event){
+        event.target.classList.toggle('bxs-sun');
+        document.body.classList.toggle('theme-dark');
+    })
+  })
 });
 
 
@@ -83,7 +85,7 @@ function addBatteryChart(batteryData) {
               parsing: false,
               type: 'time',
               time: {
-                unit: 'minute',
+                unit:'hour',
                 displayFormats: {
                   minute: 'MMM dd, HH:mm',
                 },
@@ -99,5 +101,4 @@ function addBatteryChart(batteryData) {
       };
       batteryChart = new Chart(document.getElementById('battery-chart'), config);
 }
-
 

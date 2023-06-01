@@ -1,38 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @import 'three-dots';
 
-:root{
-  --main-text-color : #414141;
-  --main-color : #ccc;
-  --light-body-bgcolor : #fcfcfc;
+:root {
+  --main-text-color: #414141;
+  --main-color: #ccc;
+  --light-body-bgcolor: #fcfcfc;
   --dark-body-bgcolor: #232323;
   --secondary-text-color: #f5f5f5;
 }
 
-a{
-  color: var(--main-text-color);
+a {
+  color: var(--main-text-color) !important;
+  text-decoration: none;
+  transition: 0.3s;
+  &:hover {
+    color: #606060 !important;
+  }
 }
 
-body{
+body {
   color: var(--main-text-color);
   background-color: var(--light-body-bgcolor);
-  transition: .3s;
+  transition: 0.3s;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
 }
 
-.theme-dark{
+.theme-dark {
   color: var(--secondary-text-color);
   background-color: var(--dark-body-bgcolor);
   a {
-    color: var(--secondary-text-color);
+    color: var(--secondary-text-color) !important;
   }
 }
-
 
 header {
   h1 {
     font-size: 4.5vmax;
+  }
+  nav {
+    ul {
+      li {
+        cursor: pointer;
+      }
+    }
   }
 }
 aside {
@@ -76,11 +87,11 @@ aside {
   }
 }
 main {
-  #graph-wrapper{
+  #graph-wrapper {
     // background-color: red;
-    #battery-chart{
-      width: 100%!important;
-      height: auto!important;
+    #battery-chart {
+      width: 100% !important;
+      height: auto !important;
     }
   }
   #battery-wrapper {
