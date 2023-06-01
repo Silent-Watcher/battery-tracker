@@ -1,3 +1,41 @@
+header{
+    h1{
+        font-size: 4.5vmax;
+    }
+}
+aside{
+    > div{
+        width: 20px;
+        height: 100px;
+        position: relative;
+    }
+    #aside-left{
+        left: 10%;
+        &::after{
+            content: '';
+            width: 3px;
+            height: 140px;
+            background-color: #ccc;
+            position: absolute;
+            top: 100%;
+        }
+    }
+    #aside-right{
+        right: 10%;
+        &::after{
+            top: 100%;
+            content: '';
+            width: 3px;
+            height: 100px;
+            background-color: #ccc;
+            position: absolute;
+        }
+    }
+    i{
+        font-size: 1.8rem;
+        margin: 10px 0;
+    }
+}
 main {
   #battery-wrapper {
     #battery {
@@ -24,6 +62,9 @@ main {
         border-radius: 0.8rem;
         background-color: rgb(41, 211, 41);
       }
+    }
+    #battery-percentage{
+      font-size: 5vmax;
     }
   }
 }

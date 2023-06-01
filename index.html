@@ -19,10 +19,24 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <!-- icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- main css -->
     <link rel="stylesheet" href="src/scss/style.scss" />
   </head>
-  <body class="vw-100 vh-100 d-flex justify-content-center align-items-center">
+  <body class="vw-100 vh-100 d-flex justify-content-center align-items-center position-relative">
+    <aside>
+      <div id="aside-left" class="position-fixed  d-flex flex-column justify-content-center align-items-center">
+        <i class='bx bxs-moon'></i>
+        <i class='bx bxl-github'></i>
+        <!-- <i class='bx bxs-sun' ></i> -->
+      </d>
+      <div id="aside-right" class="position-fixed d-flex flex-column justify-content-center align-items-center">
+        <i class='bx bxl-android' ></i>
+        <i class='bx bxl-apple' ></i>
+        <i class='bx bxl-windows'></i>
+      </div>
+    </aside>
     <div class="container-fluid">
       <div class="container">
         <header>
@@ -36,10 +50,10 @@
               id="battery-wrapper"
               class="d-flex flex-column justify-content-center align-items-center"
             >
-              <div id="battery" class="mb-5">
+              <div id="battery" class="mb-4">
                 <div id="battery-value"></div>
               </div>
-              <p id="battery-percentage">82%</p>
+              <p id="battery-percentage" class="mb-0">82%</p>
               <p id="battery-status">15 min remaining</p>
             </section>
           </div>
