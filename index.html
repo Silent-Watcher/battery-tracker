@@ -24,7 +24,7 @@
     <!-- main css -->
     <link rel="stylesheet" href="src/scss/style.scss" />
   </head>
-  <body class="vw-100 vh-100 d-flex justify-content-center align-items-center position-relative user-select-none">
+  <body class="vw-100 d-flex justify-content-center align-items-center position-relative user-select-none">
     <aside>
       <div id="aside-left" class="position-fixed  d-flex flex-column justify-content-center align-items-center">
         <i id="moon" class='bx bxs-moon '></i>
@@ -41,7 +41,7 @@
       <div class="container">
         <header>
           <div class="row">
-            <h1 class="text-center mb-5">Battery Tracker</h1>
+            <h1 class="text-center mt-5 mb-3">Battery Tracker</h1>
           </div>
         </header>
         <main class="my-5">
@@ -52,16 +52,16 @@
             >
               <div id="battery" class="mb-4 position-relative">
                 <div id="battery-level"></div>
-                <img hidden class="position-absolute" id="battery-thunder" src="./thunder.png" alt="thunder">
+                <img loading="lazy" hidden class="position-absolute" id="battery-thunder" src="./thunder.png" alt="thunder">
               </div>
-              <p id="battery-percentage" class="mb-0">82%</p>
-              <p id="battery-status" class="mb-2" >15 min remaining</p>
+              <p id="battery-percentage" class="mb-0">0%</p>
+              <p id="battery-status" class="mb-2" >... min remaining</p>
               <p id="charging-text" class="text-secondary d-none justify-content-center align-items-center"><span>charging</span> <span class="dot-elastic ms-4"></span></p>
             </section>
           </div>
           <div class="row">
-            <section id="graph-wrapper">
-              <div id="graph"></div>
+            <section id="graph-wrapper" class="col-12 col-md-6 offset-md-3">
+              <canvas id="battery-chart"></canvas>
             </section>
           </div>
         </main>

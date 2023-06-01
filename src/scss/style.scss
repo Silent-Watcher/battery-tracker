@@ -17,7 +17,9 @@ body{
   color: var(--main-text-color);
   background-color: var(--light-body-bgcolor);
   transition: .3s;
-  font-family: 'Roboto', sans-serif;}
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
 
 .theme-dark{
   color: var(--secondary-text-color);
@@ -41,6 +43,7 @@ aside {
   }
   #aside-left {
     left: 10%;
+    position: fixed;
     &::after {
       content: '';
       width: 3px;
@@ -51,6 +54,7 @@ aside {
     }
   }
   #aside-right {
+    position: fixed;
     right: 10%;
     &::after {
       top: 100%;
@@ -72,6 +76,13 @@ aside {
   }
 }
 main {
+  #graph-wrapper{
+    // background-color: red;
+    #battery-chart{
+      width: 100%!important;
+      height: auto!important;
+    }
+  }
   #battery-wrapper {
     #battery {
       width: 250px;
@@ -95,7 +106,7 @@ main {
         width: 0;
         height: 100%;
         border-radius: 0.8rem;
-        background-color: #34c759;
+        background-color: #ccc;
       }
       #battery-thunder {
         width: 150px;
