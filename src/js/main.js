@@ -4,13 +4,13 @@ import 'chartjs-adapter-date-fns';
 import * as batteryHelper from './battery.helper.js';
 
 let batteryChart;
-let battery = await batteryHelper.getBatteryInfo();
-const batteryData = JSON.parse(localStorage.getItem('batteryData')) ?? [
-  { x: Date.now(), y: battery.level * 100 },
-];
 
 window.addEventListener('load', async () => {
   const chargingText = document.getElementById('charging-text');
+  let battery = await batteryHelper.getBatteryInfo();
+  const batteryData = JSON.parse(localStorage.getItem('batteryData')) ?? [
+    { x: Date.now(), y: battery.level * 100 },
+  ];
   addBatteryChart(batteryData);
   batteryHelper.changeBatteryLevelColor(battery);
   batteryHelper.updateTimeRemaining(battery);
@@ -40,7 +40,6 @@ window.addEventListener('load', async () => {
       x: Date.now(),
       y: event.currentTarget.level * 100,
     });
-    console.log(batteryData);
     localStorage.setItem('batteryData', JSON.stringify(batteryData));
     addBatteryChart(JSON.parse(localStorage.getItem('batteryData')));
     batteryHelper.updateTimeRemaining(event.currentTarget);
@@ -52,53 +51,51 @@ window.addEventListener('load', async () => {
     }
   });
   //   dark and light theme
-  document.querySelectorAll('.moon').forEach(icon => {
-    icon.addEventListener('click',function(event){
-        event.target.classList.toggle('bxs-sun');
-        document.body.classList.toggle('theme-dark');
-    })
-  })
+  document.querySelectorAll('.moon').forEach((icon) => {
+    icon.addEventListener('click', function (event) {
+      event.target.classList.toggle('bxs-sun');
+      document.body.classList.toggle('theme-dark');
+    });
+  });
 });
-
 
 function addBatteryChart(batteryData) {
   if (batteryChart) {
     batteryChart.destroy();
   }
-      let chartId = 'battery-chart-' + new Date().getTime();
-      let data = {
-        datasets: [
-          {
-            label: 'Battery Level',
-            data: batteryData,
-            borderWidth: 1,
-          },
-        ],
-      };
-      let config = {
-        type: 'bar',
-        data,
-        options: {
-          responsive: true,
-          scales: {
-            x: {
-              parsing: false,
-              type: 'time',
-              time: {
-                unit:'hour',
-                displayFormats: {
-                  minute: 'MMM dd, HH:mm',
-                },
-              },
-            },
-            y: {
-              beginAtZero: true,
-              max: 100,
+  let chartId = 'battery-chart-' + new Date().getTime();
+  let data = {
+    datasets: [
+      {
+        label: 'Battery Level',
+        data: batteryData,
+        borderWidth: 1,
+      },
+    ],
+  };
+  let config = {
+    type: 'bar',
+    data,
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          parsing: false,
+          type: 'time',
+          time: {
+            unit: 'hour',
+            displayFormats: {
+              minute: 'MMM dd, HH:mm',
             },
           },
         },
-        chartId: chartId
-      };
-      batteryChart = new Chart(document.getElementById('battery-chart'), config);
+        y: {
+          beginAtZero: true,
+          max: 100,
+        },
+      },
+    },
+    chartId: chartId,
+  };
+  batteryChart = new Chart(document.getElementById('battery-chart'), config);
 }
-
