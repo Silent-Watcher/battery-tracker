@@ -1,6 +1,6 @@
 
 
-<h1 tabindex="-1" dir="auto"><a id="user-content--thanks-for-visiting" class="anchor" aria-hidden="true" href="#-thanks-for-visiting"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Battery.png" alt="Battery" width="25" height="25" /></a>Battery Tracker</h1>
+<h1 tabindex="-1" dir="auto"><a id="user-content--thanks-for-visiting" class="anchor" aria-hidden="true" href="#-thanks-for-visiting"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Low%20Battery.png" alt="Low Battery" width="25" height="25" /></a>Battery Tracker</h1>
 
 Battery Tracker is a web application that allows you to monitor and track the battery level of your device in real-time. It provides useful information such as battery level, charging status, time remaining, and historical data with interactive charts.
 
