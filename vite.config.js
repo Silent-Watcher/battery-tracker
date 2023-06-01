@@ -2,16 +2,16 @@ import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base:'/battery-tracker/',
+  base: '/battery-tracker/',
   plugins: [
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
         name: 'Battery_Tracker',
         short_name: 'Battery_Tracker',
-        
+
         display: 'standalone',
-        orientation:"any",
+        orientation: 'any',
         start_url: '/',
         dir: 'ltr',
         background_color: '#232323',
@@ -19,6 +19,11 @@ export default defineConfig({
           'Battery Tracker is a web application that allows you to monitor and track the battery level of your device in real-time. It provides useful information such as battery level, charging status, time remaining, and historical data with interactive charts.',
         theme_color: '#232323',
         icons: [
+          {
+            src: 'battery.png',
+            sizes: '512x512',
+            purpose: 'any',
+          },
           {
             src: 'windows11/SmallTile.scale-100.png',
             sizes: '71x71',
