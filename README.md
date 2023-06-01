@@ -39,8 +39,9 @@ Battery Tracker is a web application that allows you to monitor and track the ba
 ## Preview
 <img src='https://iili.io/HrsCw41.png'>
 
-##demo
+## demo
 ### GitHub pages
+
 
 
 ## Prerequisites
