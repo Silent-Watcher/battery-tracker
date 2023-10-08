@@ -42,6 +42,13 @@ Battery Tracker is a web application that allows you to monitor and track the ba
 ## demo
 ### GitHub pages
 https://silent-watcher.github.io/battery-tracker/
+<p>
+ 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Silent-Watcher/battery-tracker)
+
+</p>
+
+
 
 ## Prerequisites
 In order to run this project, you will need to have the following installed on your computer:
