@@ -1,4 +1,4 @@
-![battery tracker banner](https://github.com/Silent-Watcher/timer/blob/master/public/img/banner.png)
+![battery tracker banner](https://github.com/Silent-Watcher/battery-tracker/blob/master/.github/battery-banner.png)
 
 <h1 tabindex="-1" dir="auto">Battery Tracker <a id="user-content--thanks-for-visiting" class="anchor" aria-hidden="true" href="#-thanks-for-visiting"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Low%20Battery.png" alt="Low Battery" width="25" height="25" /></a></h1>
 
